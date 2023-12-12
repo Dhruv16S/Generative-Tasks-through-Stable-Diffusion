@@ -19,7 +19,7 @@
             <h1>Implementation of Stable Diffusion</h1>
             <h2>The following is the implementation of generative tasks such as <a href="https://huggingface.co/docs/diffusers/using-diffusers/conditional_image_generation">Text-to-Image</a> and <a href="https://huggingface.co/docs/diffusers/using-diffusers/img2img">Image-to-Image</a> using the <a href="https://huggingface.co/docs/diffusers/index">pretrained diffuser models</a>.</h2>
             <div>
-              <form id="generateForm" action="/generate" method="POST">
+              <form id="generateForm" action="/generate" method="POST" onsubmit="showLoading()">
                 <div>
                   <h3 style="display:inline-block">Select task</h3>
                   <select id="taskSelect" name="task" required>
@@ -38,12 +38,27 @@
             </div>
           </div>
           <div class="col-lg-6 hero-img">
+            <div id="loading-screen" class="loading-screen">
+                <div class="spinner"></div>
+                <p>Generating image. This may take upto 30 seconds to 5 minutes.</p>
+            </div> 
             <!-- Update with generated image -->
-            <img src="{{ url_for('static', filename='./gen.png') }}" class="img-fluid" alt="">
+            <img src="{{ url_for('static', filename='./gen.png') }}" class="img-fluid" alt="Generated Image" onload="hideLoading()">
+            <a id="download-button" download="generated_image.png" href="{{ url_for('static', filename='./gen.png') }}" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">Download Image</a>
           </div>
         </div>
       </div>
     </section>
+    <script>
+        function showLoading() {
+          document.getElementById("loading-screen").style.display = "flex";
+          document.getElementById("download-button").style.display = "none";
+        }
+        function hideLoading() {
+          document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("download-button").style.display = "inline-block";
+        }
+      </script>
   </body>
   
 </html>
