@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stable Diffusion</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stable Diffusion</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <form action="/generate" method="post">
-        <textarea name="prompt" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Generate">
-    </form>
-</body>
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1>Implementation of Stable Diffusion</h1>
+            <h2>The following is the implementation of generative tasks such as <a href="https://huggingface.co/docs/diffusers/using-diffusers/conditional_image_generation">Text-to-Image</a> and <a href="https://huggingface.co/docs/diffusers/using-diffusers/img2img">Image-to-Image</a> using the <a href="https://huggingface.co/docs/diffusers/index">pretrained diffuser models</a>.</h2>
+            <div>
+              <form id="generateForm" action="/generate" method="POST">
+                <div>
+                  <h3 style="display:inline-block">Select task</h3>
+                  <select id="taskSelect" name="task" required>
+                    <option value="text2image">Text to Image</option>
+                    <option value="image2image">Image to Image</option>
+                  </select>
+                </div>
+                <div>
+                  <textarea required name="prompt" id="prompt"></textarea>
+                </div>
+  
+                <div class="text-center text-lg-start">
+                  <button id="submit" type="submit" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">Generate Image</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-img">
+            <!-- Update with generated image -->
+            <img src="{{ url_for('static', filename='./gen.png') }}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  
 </html>
