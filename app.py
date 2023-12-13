@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from diffusers import StableDiffusionPipeline
 from auth_token import token
+import os
 
 app = Flask(__name__)
 
@@ -9,10 +10,18 @@ pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5",
 
 @app.route('/')
 def home():
+    try:
+        os.remove("./static/gen.png")
+    except:
+        pass
     return render_template('index.html', image_path="None")
 
 @app.route('/generate', methods=['POST'])
 def generate():
+    try:
+        os.remove("./static/gen.png")
+    except:
+        pass
     task = request.form['task']
     prompt = request.form['prompt']
 
