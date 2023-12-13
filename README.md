@@ -1,5 +1,13 @@
 The following repository is an implementation of the diffusers library by hugging face and more particularly the pre trained stable diffusion models. 
 
+https://github.com/Dhruv16S/Generative-Tasks-through-Stable-Diffusion/assets/79364881/6c93cda3-0df6-4a99-8d0d-fa6c93b8b909
+
+#### Generated images
+
+![Darth Vader f1](https://github.com/Dhruv16S/Generative-Tasks-through-Stable-Diffusion/assets/79364881/825e9cdd-9e39-4dc7-a5cb-ea33fac0a3b7)
+
+![Anakin vs Darth Vader on Mustafar](https://github.com/Dhruv16S/Generative-Tasks-through-Stable-Diffusion/assets/79364881/04bb7e60-b9de-4428-ace2-bb15f76303e8)
+
 # Diffusers Library by Hugging Face
 
 The [diffusers library](https://huggingface.co/docs/diffusers/index) by Hugging Face is a powerful tool for implementing diffusion models which are a class of generative models that leverage the concept of diffusion processes to generate high-quality samples. This repo contains the implementation of the [Text to Image](https://huggingface.co/docs/diffusers/using-diffusers/conditional_image_generation) and [Image to Image](https://huggingface.co/docs/diffusers/using-diffusers/img2img) tasks through stable diffusion models.
