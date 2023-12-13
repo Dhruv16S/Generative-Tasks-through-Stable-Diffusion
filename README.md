@@ -2,9 +2,9 @@ The following repository is an implementation of the diffusers library by huggin
 
 # Diffusers Library by Hugging Face
 
-The [diffusers library](https://huggingface.co/docs/diffusers/index) by Hugging Face is a powerful tool for implementing diffusion models which are a class of generative models that leverage the concept of diffusion processes to generate high-quality samples. This repo contains the implementation of the (Text to Image)[https://huggingface.co/docs/diffusers/using-diffusers/conditional_image_generation] and (Image to Image)[https://huggingface.co/docs/diffusers/using-diffusers/img2img] tasks through stable diffusion models.
+The [diffusers library](https://huggingface.co/docs/diffusers/index) by Hugging Face is a powerful tool for implementing diffusion models which are a class of generative models that leverage the concept of diffusion processes to generate high-quality samples. This repo contains the implementation of the [Text to Image](https://huggingface.co/docs/diffusers/using-diffusers/conditional_image_generation) and [Image to Image](https://huggingface.co/docs/diffusers/using-diffusers/img2img) tasks through stable diffusion models.
 
-`Note: ` For all the pretrained models, I have set the value of `safety_checker` to `None`. The documentation does not advice to this, however, I was getting an error `Potential NSFW content was detected in one or more images. A black image will be returned instead. Try again with a different prompt and/or seed.` and changed the variable as per this [issue](https://github.com/huggingface/diffusers/issues/2153)
+`Note:` For all the pretrained models, I have set the value of `safety_checker` to `None`. The documentation does not advice to this, however, I was getting an error `Potential NSFW content was detected in one or more images. A black image will be returned instead. Try again with a different prompt and/or seed.` and changed the variable as per this [issue](https://github.com/huggingface/diffusers/issues/2153)
 
 ### Installation
 
