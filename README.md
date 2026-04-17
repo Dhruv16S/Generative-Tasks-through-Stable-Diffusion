@@ -1,7 +1,5 @@
 The following repository is an implementation of the diffusers library by hugging face and more particularly the pre trained stable diffusion models. 
 
-https://github.com/Dhruv16S/Generative-Tasks-through-Stable-Diffusion/assets/79364881/6c93cda3-0df6-4a99-8d0d-fa6c93b8b909
-
 #### Generated images
 
 ![Darth Vader f1](https://github.com/Dhruv16S/Generative-Tasks-through-Stable-Diffusion/assets/79364881/825e9cdd-9e39-4dc7-a5cb-ea33fac0a3b7)
